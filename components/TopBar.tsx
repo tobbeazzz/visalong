@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function TopBar() {
   return (
@@ -22,12 +21,13 @@ export default function TopBar() {
     >
       {/* Logo */}
       <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/logo/logo-horizontal.svg"
           alt="Salong Vi"
           width={200}
           height={28}
-          priority
+          style={{ display: "block" }}
         />
       </Link>
 
