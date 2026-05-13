@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --ink:       #161412;
+  --charcoal:  #2A2724;
+  --stone:     #5C5650;
+  --ash:       #9A948E;
+  --silk:      #D4CEC8;
+  --linen:     #EDE9E4;
+  --ivory:     #F7F4F0;
+  --pw:        #FDFCFB;
+  --gold:      #C4A96A;
+  --gold-pale: #E2D4B8;
+  --gold-deep: #8C7340;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--pw);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-bottom: 72px;
+}
+
+@keyframes marquee  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes livepulse{ 0%,100% { opacity:1; } 50% { opacity:0.35; } }
+@keyframes nudge    { 0%,100% { transform:translateX(0); } 60% { transform:translateX(5px); } }
+
+.animate-marquee   { animation: marquee   18s linear     infinite; }
+.animate-live      { animation: livepulse 2.5s ease-in-out infinite; }
+.animate-nudge     { animation: nudge     1.8s ease-in-out infinite; }
+
+.snap-x-mandatory  { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.snap-start        { scroll-snap-align: start; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar      { scrollbar-width: none; }
+
+.marble-bg {
+  background:
+    repeating-linear-gradient(108deg, transparent 0px, transparent 18px, rgba(196,169,106,.04) 18px, rgba(196,169,106,.04) 19px),
+    repeating-linear-gradient(172deg, transparent 0px, transparent 32px, rgba(92,86,80,.025)  32px, rgba(92,86,80,.025)  33px);
+}
