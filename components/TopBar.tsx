@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TopBar() {
   return (
@@ -19,34 +20,16 @@ export default function TopBar() {
         padding: "0 24px",
       }}
     >
-      {/* Wordmark */}
-      <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-        <span
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            fontWeight: 300,
-            fontSize: "1.3rem",
-            letterSpacing: "0.22em",
-            color: "var(--ink)",
-            textTransform: "uppercase",
-          }}
-        >
-          Salong Vi
-        </span>
-        <span
-          style={{
-            fontFamily: "var(--font-jost)",
-            fontWeight: 200,
-            fontSize: "0.52rem",
-            letterSpacing: "0.38em",
-            color: "var(--ash)",
-            textTransform: "uppercase",
-            marginTop: 1,
-          }}
-        >
-          Stenungsund · Atelier
-        </span>
-      </div>
+      {/* Logo */}
+      <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+        <Image
+          src="/logo/logo-horizontal.svg"
+          alt="Salong Vi"
+          width={200}
+          height={28}
+          priority
+        />
+      </Link>
 
       {/* Actions */}
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" role="img" aria-label="Salong Vi – monogram">
+
+  <!-- Outer thin circle -->
+  <circle cx="40" cy="40" r="37" stroke="#C4A96A" stroke-width="0.75"/>
+
+  <!-- Inner thin circle -->
+  <circle cx="40" cy="40" r="32" stroke="#C4A96A" stroke-width="0.35" stroke-dasharray="2 3"/>
+
+  <!-- Vi monogram centered -->
+  <text
+    x="40"
+    y="52"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
+    font-weight="300"
+    font-style="italic"
+    font-size="36"
+    fill="#161412"
+    letter-spacing="-1"
+  >Vi</text>
+
+  <!-- Top diamond -->
+  <rect x="37.5" y="3" width="5" height="5" fill="#C4A96A" transform="rotate(45 40 5.5)"/>
+
+  <!-- Bottom diamond -->
+  <rect x="37.5" y="71.5" width="5" height="5" fill="#C4A96A" transform="rotate(45 40 74)"/>
+
+</svg>
